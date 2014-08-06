@@ -529,7 +529,3 @@ if ( ! class_exists( 'IfeatureSlider' ) ) {
 	}
 
 }
-
-
-
-
