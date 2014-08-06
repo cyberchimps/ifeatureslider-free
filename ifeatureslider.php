@@ -46,8 +46,6 @@ if ( ! class_exists( 'IfeatureSlider' ) ) {
 			add_action( 'admin_head-post.php', array( $this, 'hide_publishing_actions' ) );
 			add_action( 'admin_head-post-new.php', array( $this, 'hide_publishing_actions' ) );
 
-			add_action( 'admin_footer', array( $this, 'admin_footer' ) );
-
 			add_action( 'wp_ajax_if_slider_load', array( $this, 'if_slider_load' ) );
 			add_action( 'admin_notices', array( $this, 'if_slider_admin_notice' ) );
 
@@ -513,8 +511,9 @@ if ( ! class_exists( 'IfeatureSlider' ) ) {
 		public function if_slider_admin_notice() {
 			if ( $this->_slider ) {
 				?>
-				<div class="error">
-					<p><?php _e( 'Sorry, only one slider is possible in free version. Please upgrade your slider.', 'my-text-domain' ); ?></p>
+				<div class="error"><p><?php _e( 'You are using the free version of the iFeature Slider Plugin. Buy <a href="http://cyberchimps.com/store/ifeature-slider/" target="_blank">Ifeature Slider Pro</a> to make unlimited sliders
+
+.' ); ?></p>
 				</div>
 			<?php
 			}
@@ -530,3 +529,7 @@ if ( ! class_exists( 'IfeatureSlider' ) ) {
 	}
 
 }
+
+
+
+
