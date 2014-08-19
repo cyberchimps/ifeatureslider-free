@@ -1,4 +1,4 @@
-=== Plugin Name ===
+=== iFeature Slider ===
 Contributors: cyberchimps
 Donate link:
 Tags: slider, images
