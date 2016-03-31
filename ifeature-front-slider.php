@@ -19,10 +19,10 @@
 		<div class="if-buttons" data-slide="<?php echo $this->slider_count; ?>">
 			<div class="if-floater"></div>
 			<a class="if-prev-btn">
-				<span class="if-arrow prev">&laquo;</span>
+				<span class="if-arrow prev" style="color:<?php echo $opts['nav_color']; ?>" >&laquo;</span>
 			</a>
 			<a class="if-next-btn">
-				<span class="if-arrow next">&raquo;</span>
+				<span class="if-arrow next" style="color:<?php echo $opts['nav_color']; ?>" >&raquo;</span>
 			</a>
 		</div>
 	</div>

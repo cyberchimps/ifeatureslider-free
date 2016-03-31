@@ -3,9 +3,9 @@
 Plugin Name: iFeature Slider Free
 Plugin URI: 
 Version: 1.0
-Description: A Wordpress slider built with a great User Experience and Design in mind. This plugin provides a beautiful, simple, and easy to use slider. 
+Description: A WordPress slider built with a great User Experience and Design in mind. This plugin provides a beautiful, simple, and easy to use slider. 
 Author: CyberChimps inc.
-Auther URI: http://cyberchimps.com/
+Author URI: http://cyberchimps.com/
 License: Copyright by CyberChimps inc. You are free to use this plugin on any WordPress blog.
 */
 if ( ! class_exists( 'IfeatureSlider' ) ) {
@@ -382,6 +382,7 @@ if ( ! class_exists( 'IfeatureSlider' ) ) {
 
 			$d = isset( $opts['s_delay'] ) ? $opts['s_delay'] : 3;
 			$t = isset( $opts['t_time'] ) ? $opts['t_time'] : 1;
+			$color = isset( $opts['nav_color'] ) ? $opts['nav_color'] : '#4993E7';
 			$c = isset( $opts['s_auto'] ) ? 'checked="checked"' : '';
 			if ( empty( $opts ) ) {
 				$c = 'checked="checked"';
@@ -400,6 +401,10 @@ if ( ! class_exists( 'IfeatureSlider' ) ) {
 					</label>
 					<input type="text" value="<?php echo $t; ?>" name="if_slider_options[t_time]"/>
 				</p>
+                               <p>
+			     <label> Navigation Color </label>
+			     <input type='color' value="<?php echo $color; ?>"  name="if_slider_options[nav_color]" id="nav_color" type="text"  />
+			     </p>
 				<p class="check-container">
 					<input id="if_slider_s_auto" class="checkbox-toggle" <?php echo $c; ?> name="if_slider_options[s_auto]" type="checkbox" value="yes">
 					<label style="float:left;" class="in-label">Auto Slide</label>
