@@ -402,7 +402,7 @@ if ( ! class_exists( 'IfeatureSlider' ) ) {
 					<input type="text" value="<?php echo $t; ?>" name="if_slider_options[t_time]"/>
 				</p>
                                <p>
-			     <label> Navigation Color </label>
+			     <label> Navigation Arrow </label>
 			     <input type='color' value="<?php echo $color; ?>"  name="if_slider_options[nav_color]" id="nav_color" type="text"  />
 			     </p>
 				<p class="check-container">
