@@ -2,7 +2,7 @@ iFeature Slider Changelog
 
 ****************************
 
-Version 1.1 (04/04/16)
+Version 1.1 (05/04/16)
 - Added feature to change navigation arrow color
 
 Version 1.0

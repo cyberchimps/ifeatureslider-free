@@ -2,7 +2,7 @@
 /*
 Plugin Name: iFeature Slider Free
 Plugin URI: 
-Version: 1.0
+Version: 1.1
 Description: A WordPress slider built with a great User Experience and Design in mind. This plugin provides a beautiful, simple, and easy to use slider. 
 Author: CyberChimps inc.
 Author URI: http://cyberchimps.com/
