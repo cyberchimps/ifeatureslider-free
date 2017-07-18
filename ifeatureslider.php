@@ -15,6 +15,7 @@ if ( ! class_exists( 'IfeatureSlider' ) ) {
 			$title = 'iFeature Slider',
 			$slug = 'ifeatureslider',
 			$meta_imgs = '_if_slider_imgs',
+                        $meta_imgs_title = '_if_slider_imgs_title',
 			$meta_options = '_if_options',
 			$_slider = false,
 			$slider_count = 0,
@@ -108,6 +109,7 @@ if ( ! class_exists( 'IfeatureSlider' ) ) {
 			$id            = (int) $atts['id'];
 			$this->post_id = $id;
 			$slides        = $this->get_slides( $id );
+                        $img_titles  = $this->get_img_title();
 			$slide_count   = count( $slides );
 			if ( ! $slides ) {
 				echo 'Invalid slider id';
@@ -221,19 +223,29 @@ if ( ! class_exists( 'IfeatureSlider' ) ) {
 				}
 
 				$imgs = $_POST['if_slider_imgs'];
+                                $imgs_title = $_POST['if_slider_imgs_title'];
+                               
+                              
 				if ( ! $imgs ) {
 					return false;
 				}
 				foreach ( $imgs as $img ) {
+                                    
+                              
 					if ( ! $img ) {
 						continue;
 					}
 					$array[] = $img;
+                                        
 				}
+                                
 				if ( count( $array ) > 2 ) {
 					$array = array( $array[0], $array[1] );
+                                     
 				}
+                               
 				update_post_meta( $_POST['post_ID'], $this->meta_imgs, $array );
+                                update_post_meta( $_POST['post_ID'], $this->meta_imgs_title, $imgs_title );
 				update_post_meta( $_POST['post_ID'], $this->meta_options, $_POST['if_slider_options'] );
 			}
 		}
@@ -243,9 +255,15 @@ if ( ! class_exists( 'IfeatureSlider' ) ) {
 
 			return isset( $opts[0] ) ? $opts[0] : array();
 		}
+                public function get_img_title() {
+			$img_title = get_post_meta( $this->post_id, $this->meta_imgs_title );
+
+			return isset( $img_title[0] ) ? $img_title[0] : array();
+		}
 
 		public function get_slides( $id, $size = '' ) {
 			$meta       = get_post_meta( $id, $this->meta_imgs );
+                        
 			$data       = isset( $meta[0] ) ? $meta[0] : '';
 			$upload_dir = wp_upload_dir();
 			$path       = $upload_dir['baseurl'] . '/';
@@ -415,7 +433,13 @@ if ( ! class_exists( 'IfeatureSlider' ) ) {
 		}
 
 		public function render_slides_meta_box( $post ) {
+                    
 			$slides = $this->get_slides( $post->ID, 'medium' );
+                       
+                        $this->post_id = $post->ID;
+			$img_titles  = $this->get_img_title();
+                       
+                      
 			echo '<ul class="cc-parent cc-content-section if-sortables ui-sortable" data-post-id="' . $post->ID . '">';
 			$cs = 2;
 			if ( is_array( $slides ) and count( $slides ) > 0 ) {
@@ -441,6 +465,12 @@ if ( ! class_exists( 'IfeatureSlider' ) ) {
 								<div class="clear"></div>
 							</div>
 						</div>
+                                           
+                                            <div class="slider_cap_wrapper">
+                                                <label for="slider_caption">Enter Caption for Slider</label>
+                                                <input type="text" name="if_slider_imgs_title[]" value="<?php echo $img_titles[$i]; ?>"/>
+                                            </div>
+                                            
 					</li>
 				<?php
 				}
@@ -514,6 +544,16 @@ if ( ! class_exists( 'IfeatureSlider' ) ) {
 
 		// display admin notice if slider is more than one
 		public function if_slider_admin_notice() {
+                   
+                  if(isset($_GET['post_type']) && $_GET['post_type'] == 'if_slider')
+                  {
+                    ?>
+                        
+                        <div class="notice notice-info">
+                            <p><?php _e('Liked this plugin? <a href="https://wordpress.org/plugins/ifeature-slider/#reviews" target="_blank">Leave us</a> a ***** rating. Thank you !'); ?></p>  
+                        </div>  
+                  <?php } ?>
+                    <?php
 			if ( $this->_slider ) {
 				?>
 				<div class="error"><p><?php _e( 'You are using the free version of the iFeature Slider Plugin. Buy <a href="http://cyberchimps.com/store/ifeature-slider/" target="_blank">Ifeature Slider Pro</a> to make unlimited sliders
