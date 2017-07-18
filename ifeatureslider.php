@@ -501,6 +501,10 @@ if ( ! class_exists( 'IfeatureSlider' ) ) {
 							<div class="if-image-thumb" style="display:none"></div>
 							<input class="if-image-id" name="if_slider_imgs[]" value="<" type="hidden">
 							<input class="button-primary btn if-media-gallery-show" value="Get Image" type="submit">
+                                                        <div class="slider_title_wrapper">
+                                                            <label for="slider_caption">Enter Caption for Slider</label>
+                                                            <input type="text" name="if_slider_imgs_title[]" value="<?php echo $img_titles[$i]; ?>"/>
+                                                        </div>
 						</div>
 						<div class="clear"></div>
 					</div>
