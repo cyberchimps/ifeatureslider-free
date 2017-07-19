@@ -3,8 +3,8 @@ Contributors: cyberchimps
 Donate link:
 Tags: slider, images
 Requires at least: 3.0.1
-Tested up to: 3.9.1
-Stable tag: 1.0.0
+Tested up to: 4.8
+Stable tag: 1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -19,6 +19,7 @@ Once you have added your images you have a few more options for your new iFeatur
 * Change the slider delay in seconds
 * Change the transition time in seconds
 * Select to auto slide
+* Set Caption for slider images
 
 Publish your slider and copy and paste the shortcode anywhere in your site to see it in action
 
@@ -39,5 +40,11 @@ e.g.
 
 == Changelog ==
 
-= 1.0.0 =
-* Initial setup and release
+Version 1.2 (07/21/17)
+- Added feature to add caption for Slider Images
+
+Version 1.1 (05/04/16)
+- Added feature to change navigation arrow color
+
+Version 1.0
+- Initial release.
