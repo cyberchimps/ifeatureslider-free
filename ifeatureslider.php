@@ -2,7 +2,7 @@
 /*
 Plugin Name: iFeature Slider Free
 Plugin URI: 
-Version: 1.1
+Version: 1.2
 Description: A WordPress slider built with a great User Experience and Design in mind. This plugin provides a beautiful, simple, and easy to use slider. 
 Author: CyberChimps inc.
 Author URI: http://cyberchimps.com/
@@ -503,7 +503,9 @@ if ( ! class_exists( 'IfeatureSlider' ) ) {
 							<input class="button-primary btn if-media-gallery-show" value="Get Image" type="submit">
                                                         <div class="slider_title_wrapper">
                                                             <label for="slider_caption">Enter Caption for Slider</label>
-                                                            <input type="text" name="if_slider_imgs_title[]" value="<?php echo $img_titles[$i]; ?>"/>
+                                                            <input type="text" name="if_slider_imgs_title[]" value="<?php 
+                                                            if(isset($img_titles)){echo $img_titles[$i];}
+                                                            ?>"/>
                                                         </div>
 						</div>
 						<div class="clear"></div>
