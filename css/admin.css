@@ -44,3 +44,16 @@ ul.cc-parent > li .if-image-thumb img{
 .in-label{ width:100px; }
 
 input[type="search"]{ height:auto; }
+.slider_cap_wrapper
+  {
+      padding: 0 30px;
+  }
+  .slider_title_wrapper
+  {
+      padding: 20px 0;
+  }
+  .slider_cap_wrapper > input
+  {
+      width: 70%;
+      height: auto;
+  }

@@ -1,6 +1,7 @@
 <div id="<?php echo $idd; ?>" class="ifeatureslider ifeatureslider-<?php echo $id . ' ' . $auto; ?> ifslider-cover">
 	<div class="if-wrapper">
 		<ul class="if-slides">
+                       
 			<?php foreach ( $slides as $i => $slide ) {
 				if ( $i === 0 ) {
 					$class = '';
@@ -11,8 +12,9 @@
 					$cur   = '';
 				}
 				?>
-				<li class="slide slide-<?php echo $i . ' ' . $class . ' ' . $cur; ?>">
+				<li class="slide slider_wrapper slide-<?php echo $i . ' ' . $class . ' ' . $cur; ?>">
 					<img src="<?php echo $slide['img'] ?>" width="<?php echo $slide['width'] ?>" height="<?php echo $slide['height'] ?>"/>
+                                        <h3 class="slider_caption"><?php echo $img_titles[$i]; ?></h3>
 				</li>
 			<?php } ?>
 		</ul>
