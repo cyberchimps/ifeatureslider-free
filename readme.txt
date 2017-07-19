@@ -3,7 +3,7 @@ Contributors: cyberchimps
 Donate link:
 Tags: slider, images
 Requires at least: 3.0.1
-Tested up to: 3.9.1
+Tested up to: 4.8
 Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -19,6 +19,7 @@ Once you have added your images you have a few more options for your new iFeatur
 * Change the slider delay in seconds
 * Change the transition time in seconds
 * Select to auto slide
+* Set Caption for slider images
 
 Publish your slider and copy and paste the shortcode anywhere in your site to see it in action
 
