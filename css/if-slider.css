@@ -101,6 +101,20 @@
     right: 5%;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 10px;
+    box-sizing: border-box;
    
   }
-  
+  @media (max-width: 768px) {
+       .slider_caption
+         {
+            position: initial;
+            width: 100%;
+         }
+         .ifeatureslider img{
+             height: 300px;
+         }
+         .if-buttons a
+         {
+             padding: 0;
+         }
+  }
