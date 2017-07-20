@@ -107,8 +107,8 @@
   @media (max-width: 768px) {
        .slider_caption
          {
-            position: initial !important;
-            width: 100% !important;
+            position: initial;
+            width: 100%;
          }
          .ifeatureslider img{
              height: 300px;
